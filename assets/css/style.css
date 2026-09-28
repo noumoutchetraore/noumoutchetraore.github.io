@@ -4,7 +4,7 @@
   --heading: #37474f;
   --line: #e0e0e0;
   --paper: #ffffff;
-  --link: #1a73e8;
+  --link: #0000ee;
   --sans: "Lato", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -21,16 +21,16 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.75;
 }
 
 a {
   color: var(--link);
-  text-decoration: none;
+  text-decoration: underline;
 }
-a:hover { text-decoration: underline; }
+a:hover { color: #0000b3; }
 a:focus-visible {
   outline: 2px solid var(--link);
   outline-offset: 2px;
@@ -129,11 +129,13 @@ p {
   text-align: justify;
   text-justify: inter-word;
 }
+.interests,
+.links { text-align: left; }
 
 /* Research items */
 .item { margin-bottom: 32px; }
 .item h3 {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.1rem;
   line-height: 1.4;
   color: var(--ink);
@@ -162,7 +164,7 @@ p {
   gap: 2px 24px;
   margin-bottom: 22px;
 }
-.edu strong { font-weight: 400; }
+.edu strong { font-weight: 700; }
 .edu .year {
   color: var(--muted);
   font-size: 0.9rem;
