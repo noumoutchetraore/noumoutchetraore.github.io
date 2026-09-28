@@ -22,8 +22,8 @@ body {
   color: var(--ink);
   font-family: var(--sans);
   font-weight: 300;
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 a {
@@ -91,11 +91,12 @@ h2 {
   padding: 0;
   border: 0;
   display: block;
+  text-align: center;
 }
 
 /* Home */
 .hero {
-  padding: 24px 0 40px;
+  padding: 72px 0 56px;
   scroll-margin-top: 24px;
 }
 .hero-body {
@@ -123,7 +124,11 @@ main > section:not(.hero) {
   border-top: 1px solid var(--line);
   scroll-margin-top: 24px;
 }
-p { margin: 0 0 18px; }
+p {
+  margin: 0 0 18px;
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 /* Research items */
 .item { margin-bottom: 32px; }
@@ -199,6 +204,9 @@ footer {
   }
   main {
     padding: 0 20px 48px;
+  }
+  .hero {
+    padding: 40px 0 40px;
   }
   .hero h1,
   h2 {
