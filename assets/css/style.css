@@ -118,10 +118,6 @@ h2 {
   gap: 48px;
   align-items: start;
 }
-.hero-text .lead {
-  font-size: 1.05rem;
-  color: var(--ink);
-}
 .hero-photo img {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -241,6 +237,9 @@ footer {
   h2 {
     font-size: 2.2rem;
     margin-bottom: 24px;
+  }
+  .hero h1 {
+    margin-bottom: 40px;
   }
   .hero-body {
     grid-template-columns: 1fr;
