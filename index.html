@@ -14,7 +14,8 @@
 
 <header class="topbar">
   <a class="brand" href="#home">Noumoutche Yaya Traoré</a>
-  <nav aria-label="Sections">
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+  <nav aria-label="Sections" id="site-nav">
     <a href="#home">Home</a>
     <a href="#research">Research</a>
     <a href="#education">Education</a>
@@ -90,6 +91,21 @@
   </footer>
 
 </main>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteNav = document.getElementById('site-nav');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = siteNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+  siteNav.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      siteNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
 
 </body>
 </html>
