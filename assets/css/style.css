@@ -72,6 +72,16 @@ a:focus-visible {
   color: var(--ink);
   border-bottom-color: var(--line);
 }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--ink);
+  padding: 4px 8px;
+  cursor: pointer;
+}
 
 main {
   max-width: 900px;
@@ -203,6 +213,20 @@ footer {
 @media (max-width: 720px) {
   .topbar {
     padding: 20px 20px 16px;
+    position: relative;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .topbar nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+    margin-top: 16px;
+  }
+  .topbar nav.open {
+    display: flex;
   }
   main {
     padding: 0 20px 48px;
@@ -220,7 +244,7 @@ footer {
     gap: 24px;
   }
   .hero-photo {
-    max-width: 200px;
+    max-width: none;
   }
   main > section:not(.hero) {
     padding: 36px 0;
