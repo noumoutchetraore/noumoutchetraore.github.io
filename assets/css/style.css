@@ -237,7 +237,7 @@ footer {
   .hero h1,
   h2 {
     font-size: 2.2rem;
-    margin-bottom: 24px;
+    margin-bottom: 64px;
   }
   .hero-body {
     grid-template-columns: 1fr;
