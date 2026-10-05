@@ -55,7 +55,7 @@ summary:focus-visible {
   border-radius: 4px;
 }
 
-/* Header: floating bar */
+/* Header */
 .topbar {
   display: flex;
   align-items: center;
@@ -63,18 +63,13 @@ summary:focus-visible {
   flex-wrap: nowrap;
   gap: 12px 32px;
   position: sticky;
-  top: 16px;
+  top: 0;
   z-index: 10;
-  width: calc(100% - 32px);
-  max-width: 860px;
-  margin: 16px auto 0;
-  padding: 10px 14px 10px 26px;
-  background: var(--nav-bg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--line);
-  border-radius: 9999px;
-  box-shadow: 0 8px 30px rgba(28, 25, 22, 0.06);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 24px 18px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
 }
 .topbar .brand {
   font-weight: 400;
@@ -86,21 +81,23 @@ summary:focus-visible {
 .topbar nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 0;
 }
 .topbar nav a {
   color: var(--muted);
   text-decoration: none;
   font-size: 0.93rem;
   letter-spacing: 0.02em;
-  padding: 6px 14px;
-  border-radius: 9999px;
-  transition: background 0.4s var(--ease), color 0.4s var(--ease);
+  padding: 4px 0;
+  margin-left: 24px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 .topbar nav a:hover,
 .topbar nav a.active {
   color: var(--heading);
-  background: var(--chip);
+  text-decoration: none;
+  border-bottom-color: var(--heading);
 }
 .menu-toggle {
   display: none;
@@ -362,9 +359,7 @@ footer {
 @media (max-width: 720px) {
   .topbar {
     flex-wrap: wrap;
-    border-radius: 28px;
-    padding: 8px 10px 8px 20px;
-    top: 10px;
+    padding: 14px 20px 12px;
   }
   .menu-toggle { display: block; }
   .topbar nav {
@@ -372,8 +367,9 @@ footer {
     flex-direction: column;
     width: 100%;
     gap: 2px;
-    padding: 6px 0 10px;
+    padding: 10px 0 6px;
   }
+  .topbar nav a { margin-left: 0; }
   .topbar nav.open { display: flex; }
   main { padding: 0 20px 48px; }
   .hero { padding: 48px 0 40px; }
