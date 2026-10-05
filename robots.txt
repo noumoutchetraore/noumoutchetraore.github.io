@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://noumoutchetraore.github.io/sitemap.xml
